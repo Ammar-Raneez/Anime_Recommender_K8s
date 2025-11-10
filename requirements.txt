@@ -8,3 +8,5 @@ google-cloud-storage
 matplotlib
 wordcloud
 dvc
+dvc-gs
+flask

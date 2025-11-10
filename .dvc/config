@@ -1,0 +1,4 @@
+[core]
+    remote = anime-mlops
+['remote "anime-mlops"']
+    url = gs://mlops-ammar-dvc/
