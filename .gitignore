@@ -3,3 +3,8 @@ logs
 __pycache__
 *.egg-info
 mlruns
+
+# Will be tracked by DVC
+artifacts/model_checkpoint
+artifacts/processed
+artifacts/raw
