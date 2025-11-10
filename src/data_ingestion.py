@@ -55,13 +55,11 @@ class DataIngestion:
 
     def run(self):
         try:
-            logger.info("Starting data ingestion process....")
+            logger.info("Starting data ingestion....")
             self.download_csv_from_gcp()
-            logger.info("Data ingestion process completed...")
+            logger.info("Data ingestion completed")
         except CustomException as ce:
             logger.error(f"CustomException : {str(ce)}")
-        finally:
-            logger.info("Data ingestion done...")
 
 
 if __name__ == "__main__":
