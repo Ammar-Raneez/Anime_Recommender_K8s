@@ -13,10 +13,10 @@ logger = get_logger(__name__)
 
 
 class DataIngestion:
-    def __init__(self, config):
-        self.config = config["data_ingestion"]
-        self.bucket_name = self.config["bucket_name"]
-        self.file_names = self.config["bucket_file_names"]
+    def __init__(self, config_path):
+        self.config = read_yaml(config_path)
+        self.bucket_name = self.config["data_ingestion"]["bucket_name"]
+        self.file_names = self.config["data_ingestion"]["bucket_file_names"]
 
         os.makedirs(RAW_DIR, exist_ok=True)
 
@@ -63,5 +63,5 @@ class DataIngestion:
 
 
 if __name__ == "__main__":
-    data_ingestion = DataIngestion(read_yaml(CONFIG_PATH))
+    data_ingestion = DataIngestion(CONFIG_PATH)
     data_ingestion.run()
