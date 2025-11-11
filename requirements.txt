@@ -1,6 +1,5 @@
 comet-ml
-tensorflow-macos
-tensorflow-metal
+tensorflow
 pandas
 numpy
 mlflow
