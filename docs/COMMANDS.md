@@ -34,3 +34,13 @@ docker exec -u root -it jenkins-dind bash
     apt-get update && apt-get install -y kubectl
     apt-get install -y google-cloud-sdk-gke-gcloud-auth-plugin
 ```
+
+### Grant Docker permission to Jenkins
+```bash
+docker exec -u root -it jenkins-dind bash
+    groupadd docker
+    usermod -aG docker jenkins
+    usermod -aG root jenkins
+    exit
+    docker restart jenkins-dind
+```
